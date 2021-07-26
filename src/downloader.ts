@@ -84,8 +84,10 @@ export default class Downloader {
 		const processed = `Processed:        ${ye(this.videosProcessed)}/${ye(totalVideos)}${whitespace}`;
 		const downloaded = `Total Downloaded: ${cy(downloadedMB.toFixed(2))}/${cy(totalMB.toFixed(2) + 'MB')}${whitespace}`;
 		const speed = `Download Speed:   ${gr(((downloadSpeed / 1024000) * 8).toFixed(2) + 'Mb/s')}${whitespace}`;
-		process.stdout.write('                                                         ');
-		process.stdout.write(`\n${processed}\n${downloaded}\n${speed}\n\n\n`);
+		// process.stdout.write('                                                         ');
+		// process.stdout.write(`\n${processed}\n${downloaded}\n${speed}\n\n\n`);
+        console.log('                                                         ');
+		console.log(`\n${processed}\n${downloaded}\n${speed}\n\n\n`);
 	}
 
 	/**

@@ -34,7 +34,7 @@ if (args.headless === true) {
 
 export const fetchFFMPEG = (): Promise<void> =>
 	new Promise((resolve, reject) => {
-		const platform = detectPlatform();
+		/* const platform = detectPlatform();
 		const path = args.headless === true ? './' : './db/';
 		if (fs.existsSync(`${path}${getBinaryFilename('ffmpeg', platform)}`) === false) {
 			process.stdout.write('> Ffmpeg binary missing! Downloading... ');
@@ -52,5 +52,7 @@ export const fetchFFMPEG = (): Promise<void> =>
 					}
 				}
 			);
-		} else resolve();
+		} else  */
+        
+        resolve();
 	});

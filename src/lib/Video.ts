@@ -169,7 +169,7 @@ export default class Video {
 			);
 		await new Promise((resolve, reject) =>
 			execFile(
-				'./db/ffmpeg',
+				'ffmpeg',
 				[
 					'-i',
 					`${this.filePath}.partial`,

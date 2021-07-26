@@ -13,7 +13,13 @@ WORKDIR /fp
 VOLUME /fp/db
 VOLUME /fp/videos
 
-# Install typescript so we can use the tsc command
+# Updates apt-get and installs ffmpeg
+RUN DEBIAN_FRONTEND='noninteractive' && \
+    apt-get upgrade -y && \
+    apt-get update -y && \
+    apt-get install -y ffmpeg
+
+# Install typescript so we can use the tsc command, install ffmpeg for video transcoding
 RUN npm install -g typescript
 
 # Copy package configs into working Directory

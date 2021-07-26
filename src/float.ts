@@ -58,7 +58,7 @@ const fetchNewVideos = async (subscriptions: Array<Subscription>, videoProcessor
 		await loginFloatplane();
 	}
 
-	process.stdout.write('> Fetching user subscriptions... ');
+	console.log('> Fetching user subscriptions... ');
 	const subscriptions = await fetchSubscriptions();
 	process.stdout.write('\u001b[36mDone!\u001b[0m\n\n');
 
